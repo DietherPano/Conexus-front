@@ -1,0 +1,200 @@
+.message-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.replypopup {
+ background: #F7EED3;
+ border-radius: 15px;
+ width: auto;
+ height:70%;
+ max-width: 500px;
+ overflow-y: auto;
+ padding: 20px;
+ position: relative;
+ top: 50%;
+ left:50%;
+ transform: translate(-50%,-50%);
+}
+
+.replypopup::-webkit-scrollbar{
+  display: none;
+}
+
+
+.replypopup .close {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #555;
+}
+
+.replypopup h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  margin:0;
+  flex: 2;
+}
+
+.postContentsinReply {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 10px;
+  margin-top:30px;
+  border-bottom: 1px solid #ddd;
+  align-items: flex-start;
+}
+
+.replyContentsinReply {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 50px;
+  border-bottom: 1px solid #ddd;
+  align-items: flex-start;
+}
+
+.postContentsinReply .header, .replyContentsinReply .header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.postContentsinReply .header h3, 
+.replyContentsinReply .header h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.postContentsinReply p {
+  padding-left: 70px;
+  margin: 10px 0;
+  color: black;
+  align-self: stretch;
+  font-size:18px;
+}
+
+.replyContentsinReply p {
+  padding-left: 70px;
+  margin: 10px 0;
+  color: #7d7d7d;
+  align-self: stretch;
+}
+
+.postContentsinReply .buttons, 
+.replyContentsinReply .buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buttons button {
+  background: none;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.reply-input-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.reply-input-container input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.reply-input-container button {
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.reply-input-container button:hover {
+  background-color: #555;
+}
+
+@media only screen and (max-width: 600px) {
+  .replypopup {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding:10px;
+
+  }
+  .popup-header{
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  
+  .replypopup .close {
+    font-size: 1em;
+    margin-bottom: 10px;
+    padding:10px;
+    left: 10px;
+  }
+  .replypopup h2{
+    padding:10px;
+    font-size: 1.2em;
+    margin-top:15px;
+
+  }
+  .postContentsinReply {
+    gap:10px;
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  .postContentsinReply  p {
+    padding-left: 60px;
+    margin: 0;
+    font-size:1em;
+    
+  }
+  .postContentsinReply .header h3 {
+    margin: 0;
+    font-size:1.2em;
+  }
+  .replyContentsinReply{
+    padding: 10px;
+    
+  }
+  .replyContentsinReply p{
+    padding-left: 60px;
+    margin: 0;
+    font-size:1em;
+  }
+  .replyContentsinReply .header h3 {
+    margin: 0;
+    font-size:1.2em;
+  }
+  .reply-input-container button {
+    padding: 10px;
+    font-size:1em;
+  }
+  .reply-input-container input {
+    font-size:1.1em;
+  }
+  
+  
+}

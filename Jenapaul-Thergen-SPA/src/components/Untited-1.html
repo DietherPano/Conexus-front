@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reply Popup</title>
+<style>
+  /* Basic styling for the popup */
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .reply-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .close {
+    display: block;
+    text-align: right;
+    color: #aaa;
+    cursor: pointer;
+  }
+  
+  h2 {
+    margin-top: 0;
+  }
+
+  .post-contents-reply, .reply-contents-reply {
+    margin-bottom: 10px;
+  }
+
+  .post-profile-picture, .reply-profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #555;
+  }
+
+  #post-container, .reply-contents-reply {
+    display: flex;
+    align-items: center;
+  }
+
+  .reply-actions {
+    display: flex;
+    gap: 10px;
+  }
+
+  .iconbtn {
+    display: flex;
+    align-items: center;
+    color: #aaa;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .iconbtn svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #aaa;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="openPopup()">Open Reply Popup</button>
+
+<div class="overlay" id="overlay" onclick="closePopup()"></div>
+
+<div class="reply-popup" id="replyPopup">
+  <span class="close" id="closeReplyPopup" onclick="closePopup()">Cancel</span>
+  <h2>Reply</h2>
+  <div class="post-contents-reply">
+    <div id="post-container">
+      <div class="post-profile-picture"></div>
+      <div>
+        <h3>OriginalPoster</h3>
+        <p>This is the original post content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="reply-contents-reply">
+    <div class="reply-profile-picture"></div>
+    <div>
+      <h3>ReplyUser</h3>
+      <p>This is a reply to the post.</p>
+    </div>
+    <div class="reply-actions">
+      <button class="iconbtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+        10
+      </button>
+      <button class="iconbtn" id="replyButton">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 6h-6.31a3.97 3.97 0 00-7.38 0H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h11l4 4v-4h3c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-9 0a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+        3
+      </button>
+      <button class="iconbtn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8V4l8 8-8 8v-4H4v-8z"></path></svg>
+        5
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openPopup() {
+    document.getElementById('replyPopup').style.display = 'block';
+    document.getElementById('overlay').style.display = 'block';
+  }
+
+  function closePopup() {
+    document.getElementById('replyPopup').style.display = 'none';
+    document.getElementById('overlay').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>

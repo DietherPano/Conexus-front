@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+.welcome-container {
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.wlcmPage h2 {
+    position: relative;
+    top: -80px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.signIn, .signUp {
+    position: relative;
+    top: -80px;
+    padding: 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    text-decoration: none;
+    transition: transform 0.1s, background-color 0.3s;
+}
+
+.signIn {
+    background-color: #8B6B52;
+    color: black;
+}
+
+.signUp {
+    background-color: #A6B37D;
+    color: black;
+}
+
+.signIn:hover, .signUp:hover {
+    transform: scale(1.05);
+}
+
+/* Base styles for login and create account pages */
+/* #loginPage,
+#createAccountPage {
+    margin: 10vh auto 10vh;
+    
+} */
+h2{
+  text-align: left;
+  color:#000;
+}

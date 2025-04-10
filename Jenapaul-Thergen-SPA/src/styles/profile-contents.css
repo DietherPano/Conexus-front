@@ -1,0 +1,233 @@
+.profile-container {
+    width: 650px;
+    height: 90vh;
+    margin: 10px auto;
+    background-color: #F7EED3;
+    border: 2px solid black;
+    border-radius: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.profile-picture {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.profile-header {
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr auto; /* 1fr for details, auto for picture */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.profile-details {
+    text-align: left;
+    font-family: auto;
+}
+
+.profile-details h1 {
+    font-size: 26px;
+    margin: 0;
+    color: #3d3d3d;
+    font-weight: 700;
+}
+
+.profile-details p,
+.profile-details div {
+    margin: 5px 0;
+    color: #7d7d7d;
+    font-size:18px;
+}
+
+.profilePicture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profileImg {
+    width:60px;
+    height:60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #f09090, #f0d490);
+}
+#edit-profile-button{
+    position: relative;
+    width: 100%;
+    padding:10px;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: auto;
+    margin-bottom:20px;
+}
+
+#edit-profile-button:hover {
+    background-color: #8E7152;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+.tab-button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: none;
+    color: #3d3d3d;
+
+    cursor: pointer;
+    font-weight: bold;
+    font-family: auto;
+    font-size:18px;
+}
+
+#profile-contents{
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#profile-contents::-webkit-scrollbar{
+    display: none;
+}
+
+.tab-button.active{
+    border-bottom: 2px solid black;
+}
+
+.tab-button:hover, .tab-button:focus {
+    border-bottom: 2px solid black;
+}
+
+.reply-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    background-color: #F7EED3;
+    width: 100%;
+}
+
+.reply-profile-picture {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+.replyContents {
+    flex: 1;
+    color: #3d3d3d;
+    font-family: auto;
+}
+
+.replyContents h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.replyContents p {
+    overflow-wrap: break-word;
+    font-size: 1rem;
+    color: #7d7d7d;
+    margin: 0 0 10px 0;
+    width: 40%;
+}
+
+.repost-container {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 10px;
+    border-bottom: 2px solid black;
+    background-color: #F7EED3;
+    width: 100%;
+    gap: 20px;
+}
+
+.repostContents p {
+    padding-top: 10px;
+}
+
+.iconbtn {
+    border: none;
+    background: none;
+    color: #3d3d3d;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.iconbtn img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.reply-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.tab-button.active {
+    color: #000;
+    border-bottom: 2px solid black;
+}
+
+@media only screen and (max-width: 600px) {
+    #conexusIcon{
+        display:none;
+    }
+    .profile-container{
+        width:300px;
+        padding:10px;
+        margin:0;
+        border:none;
+    }
+  
+    .profile-details h1 {
+        font-size: 1.7em;
+    }
+    .profile-details p,
+    .profile-details div {
+        font-size:.8em;
+    }
+    .profile-picture {
+        width:70px;
+        height:70px;
+    }
+    #edit-profile-button{
+        padding:10px;
+        font-size: 1em;
+    }
+    .tab-button {
+        font-size: 1em;
+    }
+    .reply-profile-picture {
+        width: 30px;
+        height: 30px;
+        
+    }
+}

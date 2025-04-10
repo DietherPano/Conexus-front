@@ -1,0 +1,253 @@
+#loginPage .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F7EED3;
+}
+
+#loginPage .container h2{
+    font-family:"Orelega One", serif ;
+    font-weight:bold;
+    font-size:36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+
+}
+#loginPage .container a{
+    font-size: 18px;
+    font-family: auto;
+    margin-bottom:20px;
+}
+
+#loginPage .container #signin{
+    padding-bottom: 15px;
+}
+
+#loginPage .container label{
+    text-align: left;
+    font-size: 20px;
+    color: #333;
+    margin-bottom:20px;
+    font-family: auto;
+    
+}
+
+#loginPage .container input[type="text"],
+#loginPage .container input[type="password"]{
+    width: 100%;
+    padding: 10px;
+    font-family:auto;
+    font-size:20px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+}
+
+#loginPage .container button[type="submit"]{
+    background-color: #8B6B52;
+    color: #fff;
+    padding: 10px; /* Consistent padding */
+    width: 100%;
+    padding-bottom: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 4px 4px rgba(220, 203, 185, 0.3);
+    margin-top: 10px;
+}
+
+#loginPage .container button[type="submit"]:hover{
+    transform: scale(1.05);
+}
+
+#createAccountPage .container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:50%;
+    transform: translate(-50%, -50%);
+    background-color: #F7EED3;
+}
+#createAccountPage .container .input-group{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    gap: 10px; 
+    margin-bottom: 15px;
+}
+#createAccountPage .container .input-group label {
+    grid-template-columns: 1;
+    text-align: left;
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+    margin-bottom:20px;
+    font-family: auto;
+  } 
+  
+#createAccountPage .container h2{
+    font-family:"Orelega One", serif ;
+    font-weight:bold;
+    font-size:36px;
+    color: #333;
+    margin-bottom: 30px;
+    text-align:center;
+}
+
+
+#createAccountPage .container input[type="text"],
+#createAccountPage .container input[type="email"],
+#createAccountPage .container input[type="password"] {
+    grid-template-columns: 2;
+    width: 100%; 
+    padding: 10px;
+    font-family:auto;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    font-size: 20px;
+    margin-bottom:20px;
+    background-color: #F7EED3;
+} 
+
+#createAccountPage .container button[type="submit"] {
+    background-color: #8B6B52;
+    color: #fff;
+    padding: 10px; 
+    width: 100%;
+    padding-bottom: 15px;
+    font-size:20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+} 
+
+#createAccountPage .container button[type="button"]:hover {
+    transform: scale(1.05);
+}
+
+span.psw {
+    padding: 16px;
+    font-size: 1.3rem;
+    display: block; 
+} 
+
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+.popup {
+    font-family: Arial, sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.popup-content {
+  text-align: center;
+
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #333;
+
+} */
+
+.popup button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+
+} 
+@media only screen and (max-width: 600px) {
+    
+    #loginPage .container{
+        width:300px;
+        padding:20px;
+        margin:10px auto;
+        
+    }
+    #loginPage .container h2{
+        font-size:2.5rem;
+    }
+    #loginPage .container label{
+        font-size: 1.5rem;
+    }
+    #loginPage .container a{
+        font-size: 1.3rem;
+     
+    }
+    #loginPage .container input[type="text"],
+    #loginPage .container input[type="password"]{
+        font-size: 1.3rem;
+    }
+    #loginPage .container button[type="submit"]{
+        font-size: 1.3rem;
+    }
+    #createAccountPage .container {
+        width:300px;
+        padding:20px;
+        box-shadow:none;
+        border:none;
+    }
+    #createAccountPage .container h2 {
+        font-size: 2rem;
+        text-align: center;
+        margin-top:20px;
+    
+    }
+
+    #createAccountPage .container .input-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap:0;
+    }
+
+    #createAccountPage .container .input-group label {
+        text-align: left;
+        font-size: 1.3rem;
+    }
+
+    #createAccountPage .container input[type="text"],
+    #createAccountPage .container input[type="email"],
+    #createAccountPage .container input[type="password"] {
+        font-size: 1.2rem;
+        width: 100%;
+    }
+
+    #createAccountPage .container button[type="submit"] {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+}

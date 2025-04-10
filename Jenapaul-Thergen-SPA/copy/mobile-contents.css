@@ -1,0 +1,14 @@
+
+@media only screen and (max-width: 600px) {
+    #contents {
+        border: solid 2px black;
+        border-radius: 50px 50px 0 0px;
+        background-color: #F7EED3;
+        width: 700px;
+        overflow-y: auto;
+        height: calc(100vh - 60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

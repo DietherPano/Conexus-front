@@ -1,0 +1,65 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+#header {
+    width: 100%;
+    padding-top: 10px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    height: auto;
+    background: #F7EED3;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#conexus {
+    font-family: 'Orelega One', cursive;
+    font-weight: normal;
+    font-size: 50px;
+    margin-left: 20px;
+    text-align: left;
+    color: black;
+}
+
+#nav-text {
+    font-family: auto;
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 70px;
+    font-weight: 400;
+}
+
+#darkmode {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    #header{
+        display:none;
+    }
+   
+    #conexus{
+        display:none;
+    }
+    
+    #darkmode{
+        display:none;
+
+    }
+    #nav-text{
+        display: none;
+    }
+
+}

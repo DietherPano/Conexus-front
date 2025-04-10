@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Nav Buttons</title>
+    <style>
+        /* Container for the sliding buttons */
+        .nav-container {
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f8f4e6;
+        }
+
+        /* Sliding button row */
+        .nav-btn-slide {
+            display: flex;
+            gap: 10px;
+            transition: transform 0.3s ease;
+            will-change: transform;
+        }
+
+        /* Style for each button */
+        .nav-btn {
+            padding: 10px 20px;
+            cursor: pointer;
+            text-align: center;
+            background-color: #f8f4e6;
+            border: 2px solid #4b3f34;
+            border-radius: 20px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            color: #4b3f34;
+        }
+
+        /* Active button styling */
+        .nav-btn.active {
+            background-color: #4b3f34;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="font-family: Arial, sans-serif; color: #4b3f34;">Activity</h2>
+<div class="nav-container">
+    <div class="nav-btn-slide" id="navBtnSlide">
+        <div class="nav-btn active" onclick="setActive(this)">All</div>
+        <div class="nav-btn" onclick="setActive(this)">Follow</div>
+        <div class="nav-btn" onclick="setActive(this)">Replies</div>
+        <div class="nav-btn" onclick="setActive(this)">Repost</div>
+    </div>
+</div>
+
+<script>
+    // Track sliding state and movement
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    const navBtnSlide = document.getElementById('navBtnSlide');
+
+    // Mouse and touch events for sliding the navigation bar
+    navBtnSlide.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - navBtnSlide.offsetLeft;
+        scrollLeft = navBtnSlide.scrollLeft;
+    });
+
+    navBtnSlide.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    navBtnSlide.addEventListener('mouseup', () => {
+        isDown = false;
+    });
+
+    navBtnSlide.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - navBtnSlide.offsetLeft;
+        const walk = (x - startX) * 1.5; // Adjust scroll speed
+        navBtnSlide.style.transform = `translateX(${walk}px)`;
+    });
+
+    // Add active class to clicked button
+    function setActive(button) {
+        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+    }
+
+</script>
+
+</body>
+</html>

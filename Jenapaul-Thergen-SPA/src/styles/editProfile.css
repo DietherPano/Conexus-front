@@ -1,0 +1,204 @@
+.profileHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom:20px;
+    
+}
+
+.header-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#confirm {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 80%;
+}
+#exit {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 80%;
+
+}
+
+.userInfo {
+    width: 600px;
+    background-color: #F7EED3;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 0px rgba(90, 48, 48, 0.3);
+    position: relative;
+    
+}
+
+#login-section {
+    width: 300px;
+    height: 80px;
+    text-align: right;
+    align-items: center;
+    background-color: #F7EED3;
+    border-radius: 50px;
+}
+
+#logintext {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #F7EED3;
+    gap: 250px;
+}
+
+#logintext h2 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+#logintext p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+#editprofiletext {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px solid #000000;
+}
+
+.field label {
+    font-weight: 600;
+    font-size: 20px;
+    color: #000;
+}
+
+.field span {
+    font-size: 18px;
+    color: #444;
+    text-align: right;
+}
+
+.field.editable {
+    position: relative;
+}
+
+#changePassForm {
+    flex-direction: row;
+}
+
+.edit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.change-password-button {
+    display: block;
+    width: 100%;
+    padding:10px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    color: #000;
+    text-align: left;
+}
+.change-password-button, #text {
+    font-size: 20px;
+}
+
+.change-password-button .edit-button {
+    float: right;
+}
+
+#uploadBtn{
+    font-size:16px;
+    background-color: transparent;
+    padding: 5px;
+
+    
+}
+@media only screen and (max-width: 600px) {
+    .userInfo{
+        width:300px;
+        padding:10px;
+        margin:0;
+        padding: 10px;
+        box-shadow:none;
+
+    }
+    .change-password-button {
+        width:300px;
+        margin:0;
+        font-size: 1.2em;
+        padding:5px;
+    }
+    #logintext {
+        width:300px;
+        padding:10px;
+        margin: 0;
+        gap:10px;
+        
+    }
+    #logintext h2 {
+        font-size:1.2em;
+        margin-bottom:0;
+    }
+    #logintext p {
+        font-size:1.2em;
+        
+    }
+    #exit{
+        font-size: 2em;
+        font-weight: 500;
+    }
+    #confirm{
+        font-size:2em;
+    }
+    #editprofiletext{
+        font-size: 1.5em;
+    }
+    .field label{
+        font-size:1.2em;
+    }
+    .field span{
+        font-size: 1.2em;
+    }
+    #uploadBtn{
+        font-size: 1em;
+        border:none;
+        border-bottom:1px solid black;
+    }
+    .edit-button {
+        font-size: 1.3em;
+        
+    }
+    
+}
